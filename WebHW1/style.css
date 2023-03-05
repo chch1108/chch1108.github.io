@@ -1,0 +1,15 @@
+
+#txt{
+    top: 90px;
+    position: relative;
+    font-family: "Lucida Console", "Courier New", monospace;
+    -webkit-text-stroke: 3.5px #000000;
+}
+
+p{
+    top: 40px;
+    left: 450px;
+    position: relative;
+    font-size: 15px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
