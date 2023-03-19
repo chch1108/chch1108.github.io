@@ -1,0 +1,24 @@
+
+#txt{
+    top: 50px;
+    position: relative;
+    font-family: "Lucida Console", "Courier New", monospace;
+    -webkit-text-stroke: 3.5px #000000;
+}
+
+p {
+    top: 20px;
+    font-size: 15px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container img {
+    margin: 0 10px; /* 可以依需要調整圖片之間的間距 */
+}

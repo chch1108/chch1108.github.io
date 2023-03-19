@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>RedBull</title>
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+    <link rel="preload" href="facebook.png" as="image">
+    <link rel="preload" href="instagram.png" as="image">
+    <link rel="preload" href="youtube.png" as="image">
+    <link rel="preload" href="red-flying.mp4" as="video" type="video/mp4">
+    <style>
+        body {background: white;}
+    </style>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="show()">
+<p><b><u>Click one of the links below to get more information about us.</u></b></p>
+
+<div class="image-container">
+    <a href="https://www.facebook.com/RedBull/?locale=zh_TW"><img src="facebook.png" width="70" alt="Facebook"></a>
+    <a href="https://www.instagram.com/redbull/"><img src="instagram.png" width="70" alt="Instagram"></a>
+    <a href="https://www.youtube.com/@RedBullMotorsports"><img src="youtube.png" width="70" alt="YouTube"></a>
+</div>
+
+
+<marquee>
+    <video autoplay loop muted playsinline>
+        <source src="red-flying.mp4" width="300px" alt="!!!" type="video/mp4" />
+    </video>
+</marquee>
+<div style="position:relative; top:65px;"/>
+<div id="txt"></div>
+
+</body>
+</html>
