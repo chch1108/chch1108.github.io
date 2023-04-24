@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:site_name" content="Uber Eats" />
+    <!--title上的logo圖案-->
+    <meta property="og:image" content="https://cdn1.cybassets.com/s/files/13443/theme/41609/assets/img/1630560951_3c61cf77_og_image.jpg?1630560951" />
+    <link rel="shortcut icon" href="//cdn1.cybassets.com/s/files/13443/theme/41609/assets/img/1630560948_284dbed0_favicon.png?1630560948" type="image/x-icon" />
+    <title>帳戶登入 Uber Eats</title>
+    <!--網頁模版-->
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/beta_theme/1630560951_ea6337e0_vendor.css?1630560951' rel='stylesheet' type='text/css' media='all' />
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/beta_theme/1681181563_2cd67eae_main.css?1681181563' rel='stylesheet' type='text/css' media='all' />
+    <!--導覽列-->
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/beta_theme/1630560951_c59cebcc_navbar.css?1630560951' rel='stylesheet' type='text/css' media='all' />
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/1630560951_45815ad5_navbar.css?1630560951' rel='stylesheet' type='text/css' media='all' />
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/beta_theme/1630560951_3f111576_sidebar.css?1630560952' rel='stylesheet' type='text/css' media='all' />
+    <!--透過網頁模版在往上滑的時候左上角的會員登入會被收起來-->
+    <script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1630560948_c4bdfe6d_vendor.js?1630560948'></script>
+</head>
+
+<body style="display: flex; flex-direction: column;">
+<span class="drawer drawer--left">
+  <!--讓logo在版面中間-->
+  <header id="header">
+    <div class="hidden-md computer_nav">
+      <div class="header_logo text-center">
+        <div class="container">
+          <div class="relative">
+            <nav class="logo">
+                <a href="/">
+                  <img src="//cdn1.cybassets.com/s/files/13443/theme/41609/assets/img/1630560950_1dad373a_navbar_logo.png?1630560950" height="50" width="auto" alt="logo">
+                </a>
+            </nav>
+              <!--右上角的導覽圖示-->
+              <nav class="tool-nav">
+
+  <ul class="link_shelf_top">
+      <li class="customer_account">
+        <div class="dropdown static">
+          <!--右上角人頭icon按下後會出現下拉式選單-->
+          <a href="javascript:void(0)" data-toggle="dropdown">
+            <svg class="member-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="20.8" viewBox="0 0 40 50">
+              <path d="M26.133,22.686c3.417-2.192,5.692-6.016,5.692-10.368C31.825,5.526,26.299,0,19.507,0S7.188,5.526,7.188,12.318c0,4.352,2.275,8.176,5.692,10.368C5.381,25.098,0,31.457,0,38.926v1.627C0,44.659,3.716,48,8.283,48h22.448c4.567,0,8.283-3.341,8.283-7.447v-1.627C39.014,31.457,33.632,25.098,26.133,22.686z M10.188,12.318  C10.188,7.18,14.368,3,19.507,3s9.319,4.18,9.319,9.318c0,5.139-4.181,9.319-9.319,9.319S10.188,17.457,10.188,12.318zM36.014,40.553c0,2.452-2.37,4.447-5.283,4.447H8.283C5.37,45,3,43.005,3,40.553v-1.627c0-7.879,7.405-14.289,16.506-14.289c9.102,0,16.507,6.41,16.507,14.289L36.014,40.553L36.014,40.553z"/>
+            </svg>
+            <span class="text"></span>
+          </a>
+          <div class="dropdown-menu" role="menu">
+              <ul id="customer-not-login-menu">
+              <li class="button">
+                <a href="/account/login" class="btn-login">會員登入</a>
+              </li>
+              <li class="button">
+                <a href="/account/signup" class="btn-signin">註冊新會員</a>
+              </li></ul></div></div></li>
+
+      <li class="cart">
+        <!--電腦版的購物車選單-->
+        <div class="dropdown static">
+          <a href="javascript:void(0)" data-toggle="dropdown" class="shopcart">
+            <svg class="cart-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="32" viewBox="0 0 60 50">
+              <path d="M53.651,6.955c-0.285-0.343-0.708-0.542-1.154-0.542H13.471L12.3,1.173
+                C12.147,0.487,11.539,0,10.836,0H1.5C0.671,0,0,0.671,0,1.5S0.672,3,1.5,3h8.134l6.593,29.503c0.153,0.686,0.762,1.173,1.464,1.173
+                h27.882c0.828,0,1.5-0.672,1.5-1.5s-0.672-1.5-1.5-1.5h-26.68l-0.336-1.503l30.61-1.59c0.691-0.036,1.269-0.541,1.396-1.222
+                l3.408-18.172C54.054,7.75,53.937,7.298,53.651,6.955z M47.832,24.648l-29.938,1.554l-3.752-16.79h36.547L47.832,24.648z"/>
+              <path d="M27.829,19.456h9.873c0.828,0,1.5-0.671,1.5-1.5s-0.672-1.5-1.5-1.5h-9.873
+                c-0.829,0-1.5,0.671-1.5,1.5S27,19.456,27.829,19.456z"/>
+              <path d="M22.174,36.563c-3.153,0-5.718,2.565-5.718,5.718S19.021,48,22.174,48s5.719-2.565,5.719-5.719
+                C27.893,39.129,25.328,36.563,22.174,36.563z M22.174,45c-1.499,0-2.718-1.22-2.718-2.719s1.219-2.718,2.718-2.718
+                s2.719,1.219,2.719,2.718S23.673,45,22.174,45z"/>
+              <path d="M44.456,36.563c-3.153,0-5.719,2.565-5.719,5.718S41.302,48,44.456,48s5.719-2.565,5.719-5.719
+                C50.175,39.129,47.609,36.563,44.456,36.563z M44.456,45c-1.499,0-2.719-1.22-2.719-2.719s1.22-2.718,2.719-2.718
+                s2.719,1.219,2.719,2.718S45.955,45,44.456,45z"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <div class="cart_list global-cart-item-list custom-scrollbar">
+            </div>
+            <div class="button">
+              <a class="btn-checkout" href="/cart">立即結帳</a>
+            </div></div></div>
+      </li>
+
+      <!-- search -->
+      <li class="search">
+        <div class="dropdown static">
+          <a href="javascript:void(0)" data-toggle="dropdown">
+            <svg class="saerch-svg" xmlns="http://www.w3.org/2000/svg" height="26" width="26" viewBox="0 0 50 50">
+              <path d="M49.932,45.439l-9.987-9.987c-0.075-0.075-0.168-0.113-0.253-0.168
+              c2.773-3.688,4.419-8.269,4.419-13.229C44.111,9.894,34.217,0,22.056,0C9.894,0,0,9.894,0,22.055C0,34.217,9.894,44.11,22.055,44.11c6.15,0,11.718-2.533,15.722-6.607c0.019,0.021,0.026,0.049,0.046,0.07l9.987,9.987c0.294,0.294,0.678,0.44,1.062,0.44s0.768-0.146,1.061-0.439C50.518,46.975,50.518,46.025,49.932,45.439z M22.056,41.11c-10.507,0-19.055-8.548-19.055-19.055C3,11.548,11.549,3,22.056,3s19.055,8.548,19.055,19.055C41.111,32.562,32.563,41.11,22.056,41.11z"/>
+            </svg>
+          </a>
+          <div class="dropdown-menu" role="menu">
+            <div class="search-area">
+              <form action="/search" class="form-inline">
+                <div class="form-area">
+                  <input class="form-control" type="search" placeholder="請輸入產品名" aria-label="Search" name="q" value="">
+                  <button class="btn-search" type="submit">搜尋</button>
+                </div>
+              </form>
+              <a href="javascript:void(0)" class="close-dropdown"><i class="fa fas fa-times"></i></a>
+            </div>
+          </div>
+        </div>
+      </li></ul></nav></div></div></div>
+      <!--導覽列-->
+      <div class="header_nav">
+          <div class="container text-center">
+          <div class="relative">
+
+              <nav class="main-nav">
+  <ul class="link_shelf_top">
+        <li>
+          <a href="/collections/delivery_bags_for_onboarding">
+            <span class="text">開通保溫袋</span>
+          </a>
+        </li>
+        <li>
+          <a href="/collections/campaign_exclusive">
+            <span class="text">活動限定商品</span>
+          </a>
+        </li>
+        <li>
+          <a href="/collections/other_bag">
+            <span class="text">其他置物袋</span>
+          </a>
+        </li>
+        <li>
+          <a href="/collections/others">
+            <span class="text">其他配件</span>
+          </a>
+        </li>
+        <li>
+          <a href="/contact">
+            <span class="text">常見問題</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.uber.com/tw/zh-tw/deliver/">
+            <span class="text">外送合作夥伴開通指引</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://besitz.cyberbiz.co/contact">
+              <span class="text">常見問題</span>
+          </a>
+        </li>
+  </ul></nav></div></div></div></div>
+  </header></div></nav></span>
+
+<!-- template -->
+<div id="template" style="flex:1 0 auto;">
+    <div id="site_path">
+        <div class="container">
+            <!-- 主題版型麵包屑 -->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="breadcrumb-item
+                            itemprop="itemListElement"
+                            itemscope itemtype="http://schema.org/ListItem">
+                        <!-- home -->
+                        <a href="/" itemprop="item">
+                            <i class="fas fa-home"></i>
+                            <span style="display: none;" itemprop="name">首頁</span>
+                        </a>
+                        <!-- account -->
+                        <meta itemprop="position" content="1"/>
+                    </li>
+                    <li class="breadcrumb-item active "
+                            itemprop="itemListElement"
+                            itemscope itemtype="http://schema.org/ListItem">
+                        <!-- home -->
+                        <a href="/account/login" itemprop="item">
+                            <span itemprop="name">會員登入</span>
+                        </a>
+                        <!-- 忘記密碼 -->
+                        <meta itemprop="position" content="2"/>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <div id="login" class="login_related">
+        <!-- login container start -->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="section-heading">會員登入</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="form_container">
+                        <p class="form_title mb-4">歡迎回來</p>
+                        <form id="customer_login" class="needs-validation" method="post" action="/account/login" novalidate>
+                            <div class="form-row">
+                                <div class="col mb-4">
+                                    <label for="login">登入</label>
+                                    <input type="text" class="form-control" id="login" name="customer[login]" placeholder="請輸入您的E-MAIL或手機" >
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col mb-4">
+                                    <label for="password">密碼</label>
+                                    <input type="password" class="form-control" id="password" name="customer[password]" placeholder="請輸入您的密碼" ">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <script src="main.js"></script>
+                                <div class="col mb-4">
+                                    <!-- 按下登入後出現彈跳視窗 -->
+                                    <button class="btn w-100 mb-1 submit" type="submit" onclick="show()">會員登入</button>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="0" id="keep_login">
+                                            <label class="form-check-label ignore_validated" for="keep_login">
+                                                保持登入
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="form_footer d-flex p-3">
+                            <a class="col" href="/account/forgot_password"><i class="fa fa-key" aria-hidden="true"></i> 忘記密碼嗎？</a>
+                            <a class="col" href="/account/signup"><i class="fa fa-user" aria-hidden="true"></i> 註冊新會員</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 版面配置 -->
+    <script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1630560946_d81103ca_login.js?1630560946'></script>
+    <link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/beta_theme/1630560952_eb6a1f9f_login_related.css?1630560952' rel='stylesheet' type='text/css' media='all' />
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+    <div class="footer_content">
+        <div class="flex-container">
+            <div class="footer_flex">
+                <div class="item contact">
+                    <hr>
+                    <h5>關於我們</h5>
+                </div>
+                <div class="item contact">
+                    <hr>
+                    <h5>相關連結</h5>
+                    <ul>
+                        <li><a href="/" target="_blank">首頁</a></li>
+                        <li><a href="/account/index" target="_blank">我的帳戶</a></li>
+                        <li><a href="/pages/refund" target="_blank">退換貨政策</a></li>
+                        <li><a href="/pages/privacy" target="_blank">隱私政策</a></li>
+                        <li><a href="/pages/terms" target="_blank">服務條款</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_footer">
+        <div class="container">
+            <hr>
+            <div class="footer_flex">
+                <div class="copyright">
+                    <span>Copyright ©</span>
+                    <a href="/">Uber Eats</a>
+                    <span>All Rights Reserved. Designed by</span>
+                    <a href="https://www.cyberbiz.io?utm_source=poweredbycyberbiz" target="_blank" title="Designed by CYBERBIZ"> CYBERBIZ</a>.
+                </div>
+                <div class="social_media"></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1630560947_130a9444_sub_vendor.js?1630560947' type='text/javascript'></script>
+<script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1630560947_e504efff_theme_helper.js?1630560947' type='text/javascript'></script>
+<!-- theme assets -->
+<script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1667362975_bc0808ab_main.js?1667362975' type='text/javascript'></script>
+<script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1630560946_e544b0d4_theme.js?1630560946' type='text/javascript'></script>
+<!-- theme customized main css -->
+<link href='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/css/1630560951_3b45f84a_theme_main.css?1630560951' rel='stylesheet' type='text/css' media='all' />
+<!-- for cache -->
+<script src='//cdn1.cybassets.com/s/files/13443/theme/41609/assets/js/1676530558_139efe7d_cacheable.js?1676530558' type='text/javascript'></script>
+
+</html>
