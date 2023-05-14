@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<button id="showdata" >Show Data</button>
+<head>
+    <meta charset="UTF-8">
+    <title>Show Data</title>
+    <style>
+        .button-primary {
+            background-color: DarkSeaGreen;
+            border-radius: 50%; /* 設定按鈕的圓角半徑 */
+            border: 2px solid black; /* 設定按鈕的邊框 */
+            font-size: 20px; /* 設定按鈕的字體大小 */
+            width: 120px; /* 設定按鈕的寬度 */
+            height: 120px; /* 設定按鈕的高度 */
+
+        }
+
+        .button-secondary {
+            background-color: LightCoral;
+            border-radius: 50%; /* 設定按鈕的圓角半徑 */
+            border: 2px solid black; /* 設定按鈕的邊框 */
+            font-size: 20px; /* 設定按鈕的字體大小 */
+            width: 120px; /* 設定按鈕的寬度 */
+            height: 120px; /* 設定按鈕的高度 */
+
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 外框的框線 -->
+<table id="table" style="border: 1px solid black; display: none;"></table>
+
+<script>
+    const btn = document.getElementById('showdata');
+    const table = document.getElementById('table');
+    let showTable = false;
+    btn.classList.add('button-primary');
+    btn.addEventListener('click', toggleFlag);
+
+    async function toggleFlag() {
+        showTable = !showTable;
+        if (showTable) {
+            await showData();
+            table.style.display = 'table';
+            btn.classList.remove('button-primary');
+            btn.classList.add('button-secondary');
+            btn.textContent = 'Close Data';
+        } else {
+            table.style.display = 'none';
+            btn.classList.remove('button-secondary');
+            btn.classList.add('button-primary');
+            btn.textContent = 'Show Data';
+        }
+    }
+
+    async function showData() {
+        console.log("data");
+
+        const url = "http://localhost:3000"; // 資料傳送到的 URL
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+            });
+            const data = await response.json();
+            // 在這裡處理回應資料，例如顯示成功訊息或更新頁面內容
+            console.log("成功", data);
+
+            // 將回傳的資料用 table 顯示
+            let thead = document.createElement('thead');
+            let tbody = document.createElement('tbody');
+            let tr = document.createElement('tr');
+            let th1 = document.createElement('th');
+            let th2 = document.createElement('th');
+            let th3 = document.createElement('th');
+            th1.innerHTML = "Year";
+            th2.innerHTML = "Month";
+            th3.innerHTML = "Price";
+            tr.appendChild(th1);
+            tr.appendChild(th2);
+            tr.appendChild(th3);
+            thead.appendChild(tr);
+            table.appendChild(thead);
+            for (let i = 0; i < data.length; i++) {
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                let td2 = document.createElement('td');
+                let td3 = document.createElement('td');
+                td1.innerHTML = data[i].year;
+                td2.innerHTML = data[i].month;
+                td3.innerHTML = data[i].price;
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tbody.appendChild(tr);
+            }
+            table.appendChild(tbody);
+
+        } catch (error) {
+            // 在這裡處理錯誤，例如顯示錯誤訊息或者回
+            console.log("錯誤", error);
+        }
+    }
+
+</script>
+
+</body>
+</html>
